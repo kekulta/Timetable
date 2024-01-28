@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="professor_name_text_size">17sp</dimen>
+    <dimen name="subject_name_text_size">20sp</dimen>
+    <dimen name="time_label_text_size">25sp</dimen>
+    <dimen name="classroom_text_size">15sp</dimen>
+    <dimen name="building_text_size">15sp</dimen>
+    <dimen name="class_type_text_size">15sp</dimen>
+    <dimen name="schedule_type_text_size">15sp</dimen>
+    <dimen name="margin_between_card_components">3dp</dimen>
+</resources>

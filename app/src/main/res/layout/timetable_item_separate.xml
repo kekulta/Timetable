@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <View
+        android:id="@+id/top_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/card_background_top"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottom_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/card_background_bottom_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_background" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="7:00"
+        android:textColor="?cardTextColor"
+        android:textSize="@dimen/time_label_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/top_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_background" />
+
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider.Vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subject_name_tv_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Теория вероятностей и математическая статистика"
+        android:textColor="?cardTextColor"
+        android:textSize="@dimen/subject_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/professor_name_tv_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="@id/top_background"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/professor_name_tv_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Черняев Юрий Анатольевич"
+        android:textColor="?cardTextColor"
+        android:textSize="@dimen/professor_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/details_container_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/subject_name_tv_top"
+        app:layout_constraintTop_toBottomOf="@+id/subject_name_tv_top"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/details_container_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="@id/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/professor_name_tv_top"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/building_tv_top"
+            style="@style/Bubble.Building"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/classroom_tv_top"
+            style="@style/Bubble.Classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="411" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/class_type_tv_top"
+            style="@style/Bubble.ClassType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="пр." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/schedule_type_tv_top"
+            style="@style/Bubble.ScheduleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="чёт." />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subject_name_tv_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Теория вероятностей и математическая статистика"
+        android:textColor="?cardTextColor"
+        android:textSize="@dimen/subject_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/professor_name_tv_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="@id/bottom_background"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/professor_name_tv_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Черняев Юрий Анатольевич"
+        android:textColor="?cardTextColor"
+        android:textSize="@dimen/professor_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/details_container_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/subject_name_tv_top"
+        app:layout_constraintTop_toBottomOf="@+id/subject_name_tv_bottom" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/details_container_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/professor_name_tv_bottom">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/building_tv_bottom"
+            style="@style/Bubble.Building.Variant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/classroom_tv_bottom"
+            style="@style/Bubble.Classroom.Variant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="411" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/class_type_tv_bottom"
+            style="@style/Bubble.ClassType.Variant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="пр." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/schedule_type_tv_bottom"
+            style="@style/Bubble.ScheduleType.Variant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="чёт." />
+    </com.google.android.flexbox.FlexboxLayout>
+
+</merge>

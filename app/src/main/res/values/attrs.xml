@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cardBackgroundColorVariant" format="color" />
+    <attr name="cardTextColor" format="color" />
+    <attr name="cardTextColorVariant" format="color" />
+    <attr name="cardRoundedCornersRadius" format="dimension" />
+    <attr name="bubbleColor" format="color" />
+    <attr name="onBubbleColor" format="color" />
+    <attr name="bubbleColorVariant" format="color" />
+    <attr name="onBubbleColorVariant" format="color" />
+    <attr name="colorBackground" format="color" />
+
+    <declare-styleable name="Bubble">
+        <attr name="android:textColor" />
+        <attr name="android:backgroundTint" />
+    </declare-styleable>
+</resources>
